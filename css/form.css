@@ -1,0 +1,96 @@
+/*
+ * @Author: hunaisong 
+ * @Date: 2017-07-26 09:22:18 
+ * @Last Modified by: hunaisong
+ * @Last Modified time: 2017-07-27 16:48:52
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Arial","Microsoft YaHei","黑体","宋体",sans-serif';
+}
+.form {
+  box-sizing: border-box;
+  margin: 30px auto;
+  padding: 15px 10px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  background: #f3f3f3;
+}
+.form .form-group {
+  margin: 0 0 10px 0;
+  font-size: 0;
+}
+.form .form-group .form-label {
+  display: inline-block;
+  width: 20%;
+  height: 26px;
+  text-align: right;
+  font-size: 12px;
+}
+.form .form-group .field {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px 0 3px 5px;
+  width: 80%;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.form .form-group .field:focus {
+  outline: 0;
+  border: 1px solid skyblue;
+  box-shadow: 0 0 3px skyblue;
+}
+.form .form-group .field.error {
+  border-color: red;
+  box-shadow: 0 0 3px red;
+}
+.form .form-group .field.success {
+  border-color: lightgreen;
+  box-shadow: 0 0 3px lightgreen;
+}
+.form .form-group .formtips {
+  margin-left: 20%;
+  width: 80%;
+  font-weight: 400;
+  font-size: 12px;
+}
+.form .form-group .formtips.wrong {
+  color: red;
+}
+.form .submit {
+  margin-left: 20%;
+  width: 80%;
+}
+.form .submit .btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  outline: 0;
+  border: 1px solid transparent;
+  border-color: #0e90d2;
+  background: #0e90d2;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  user-select: none;
+}
+.form .submit .btn:hover,
+.form .submit .btn:focus {
+  background: #0c79b1;
+}
+.form .submit .btn::focus {
+  outline: 1px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
