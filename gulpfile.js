@@ -45,7 +45,7 @@ gulp.task("js",function () {
     .pipe(plugins.connect.reload())
 })
 
-// 
+// jq部分
 gulp.task("jq",function () {
     gulp.src("js/lib/jquery-3.2.1.min.js")
     .pipe(gulp.dest("dist/js/lib"))
@@ -53,7 +53,12 @@ gulp.task("jq",function () {
 // img
 gulp.task("img",function () {
     gulp.src("img/*.{png,jpg,jpeg,gif,ico,svg}")
-    .pipe(plugins.imagemin())
+    .pipe(plugins.imagemin([
+        plugins.imagemin.gifsicle({interlaced: true}),
+        plugins.imagemin.jpegtran({progressive: true}),
+        plugins.imagemin.optipng({optimizationLevel: 5}),
+        plugins.imagemin.svgo({plugins: [{removeViewBox: true}]})
+    ]))
     .pipe(gulp.dest("dist/img"))
 })
 
